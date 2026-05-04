@@ -8,8 +8,8 @@
     :root{
       --garnet:#8A1538;
       --garnet-dark:#5f0f28;
-      --garnet-soft:#f7e8ee;
-      --cream:#fffaf3;
+      --garnet-soft:#e8e1da;
+      --cream:#f7f3ee;
       --ink:#2b2226;
       --muted:#6d5c64;
       --correct:#127c56;
@@ -22,7 +22,7 @@
     body{
       margin:0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(160deg, var(--cream), var(--garnet-soft));
+      background: linear-gradient(160deg, #f7f3ee, #e4ddd5);
       color:var(--ink);
       min-height:100vh;
     }
@@ -506,10 +506,7 @@
       ];
       speechItems.forEach(q=>add("Parts of Speech", "mcq", q[0], q[1], q[2], AR.speech));
 
-      // Add controlled gap-fill alternatives by converting selected MCQs
-      BANK.forEach((q, idx) => {
-        if(idx % 5 === 0) q.type = "gap";
-      });
+      // All questions remain multiple choice for easier mobile practice.
     }
 
     buildBank();
@@ -705,7 +702,7 @@
       if(!user){
         els.feedback.className = "feedback wrong";
         els.feedback.style.display = "block";
-        els.feedback.innerHTML = "Choose or type an answer first.";
+        els.feedback.innerHTML = "Choose an answer first.";
         return;
       }
       const ok = isCorrect(user, q.answer);

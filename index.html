@@ -26,200 +26,108 @@
       color:var(--ink);
       min-height:100vh;
     }
-    .app{
-      max-width:860px;
-      margin:0 auto;
-      padding:18px;
-    }
+    .app{max-width:860px;margin:0 auto;padding:18px;}
     header{
       background:linear-gradient(135deg,var(--garnet),var(--garnet-dark));
-      color:white;
-      border-radius:var(--radius);
-      padding:22px 18px;
-      box-shadow:var(--shadow);
-      margin-bottom:16px;
+      color:white;border-radius:var(--radius);padding:22px 18px;
+      box-shadow:var(--shadow);margin-bottom:16px;
     }
-    h1{
-      font-size:clamp(1.55rem,5vw,2.5rem);
-      margin:0 0 8px;
-      line-height:1.05;
-    }
-    header p{
-      margin:0;
-      opacity:.92;
-      font-size:.98rem;
-    }
+    h1{font-size:clamp(1.55rem,5vw,2.5rem);margin:0 0 8px;line-height:1.05;}
+    header p{margin:0;opacity:.92;font-size:.98rem;}
     .card{
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:16px;
-      box-shadow:var(--shadow);
-      margin-bottom:16px;
+      background:var(--card);border-radius:var(--radius);padding:16px;
+      box-shadow:var(--shadow);margin-bottom:16px;
     }
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
-      gap:10px;
-    }
-    button, select, input{
-      font:inherit;
-    }
+    .grid{display:grid;grid-template-columns: repeat(auto-fit,minmax(160px,1fr));gap:10px;}
+    button, select, input{font:inherit;}
     button{
-      border:0;
-      border-radius:16px;
-      padding:12px 14px;
-      background:var(--garnet);
-      color:white;
-      cursor:pointer;
-      font-weight:700;
-      min-height:46px;
+      border:0;border-radius:16px;padding:12px 14px;background:var(--garnet);
+      color:white;cursor:pointer;font-weight:700;min-height:46px;transition:transform .06s ease;
     }
-    button.secondary{
-      background:var(--garnet-soft);
-      color:var(--garnet-dark);
-    }
-    button.ghost{
-      background:#f4f0f1;
-      color:var(--ink);
-    }
-    button:disabled{
-      opacity:.55;
-      cursor:not-allowed;
-    }
+    button:active{transform:scale(.97);}
+    button.secondary{background:var(--garnet-soft);color:var(--garnet-dark);}
+    button.ghost{background:#f4f0f1;color:var(--ink);}
+    button:disabled{opacity:.55;cursor:not-allowed;}
     select, input[type="text"]{
-      width:100%;
-      border:2px solid #ead5dd;
-      border-radius:16px;
-      padding:12px 14px;
-      background:white;
-      color:var(--ink);
-      min-height:46px;
+      width:100%;border:2px solid #ead5dd;border-radius:16px;padding:12px 14px;
+      background:white;color:var(--ink);min-height:46px;
     }
-    label{
-      display:block;
-      color:var(--muted);
-      font-size:.88rem;
-      font-weight:700;
-      margin-bottom:6px;
-    }
-    .stats{
-      display:grid;
-      grid-template-columns: repeat(4,1fr);
-      gap:8px;
-      margin:12px 0;
-    }
-    .stat{
-      background:#fff7f9;
-      border:1px solid #edd1db;
-      border-radius:16px;
-      padding:10px 8px;
-      text-align:center;
-    }
-    .stat strong{
-      display:block;
-      color:var(--garnet-dark);
-      font-size:1.2rem;
-    }
-    .stat span{
-      font-size:.78rem;
-      color:var(--muted);
-    }
-    .progress-wrap{
-      background:#ead5dd;
-      border-radius:99px;
-      overflow:hidden;
-      height:14px;
-      margin:10px 0 2px;
-    }
-    .progress{
-      width:0%;
-      height:100%;
-      background:linear-gradient(90deg,var(--garnet),#c94d73);
-      transition:width .25s ease;
-    }
-    .question-meta{
-      display:flex;
-      justify-content:space-between;
-      gap:10px;
-      align-items:center;
-      color:var(--muted);
-      font-size:.9rem;
-      margin-bottom:10px;
-    }
-    .badge{
-      display:inline-block;
-      background:var(--garnet-soft);
-      color:var(--garnet-dark);
-      padding:6px 10px;
-      border-radius:99px;
-      font-weight:800;
-      font-size:.78rem;
-    }
-    .question{
-      font-size:1.25rem;
-      font-weight:800;
-      line-height:1.35;
-      margin:10px 0 16px;
-    }
-    .choices{
-      display:grid;
-      gap:10px;
-    }
-    .choice{
-      width:100%;
-      text-align:left;
-      background:#faf7f8;
-      color:var(--ink);
-      border:2px solid #ead5dd;
-      font-weight:700;
-    }
-    .choice:hover{
-      border-color:var(--garnet);
-    }
-    .feedback{
-      margin-top:14px;
-      padding:13px;
-      border-radius:16px;
-      display:none;
-      line-height:1.45;
-    }
-    .feedback.correct{
-      display:block;
-      background:#e7f5ef;
-      color:#064b32;
-      border:1px solid #b7e2d1;
-    }
-    .feedback.wrong{
-      display:block;
-      background:#fff0ee;
-      color:#6e160f;
-      border:1px solid #f1b7b2;
-    }
-    .arabic{
-      direction:rtl;
-      text-align:right;
-      font-family: "Tahoma", "Arial", sans-serif;
-      margin-top:6px;
-      font-weight:700;
-    }
-    .controls{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
+    label{display:block;color:var(--muted);font-size:.88rem;font-weight:700;margin-bottom:6px;}
+    .stats{display:grid;grid-template-columns: repeat(4,1fr);gap:8px;margin:12px 0;}
+    .stat{background:#fff7f9;border:1px solid #edd1db;border-radius:16px;padding:10px 8px;text-align:center;}
+    .stat strong{display:block;color:var(--garnet-dark);font-size:1.2rem;}
+    .stat span{font-size:.78rem;color:var(--muted);}
+
+    .ring-wrap{position:relative;width:104px;height:104px;margin:8px auto 2px;}
+    .ring{transform:rotate(-90deg);display:block;}
+    .ring-track{fill:none;stroke:#ead5dd;stroke-width:10;}
+    .ring-fill{fill:none;stroke:var(--garnet);stroke-width:10;stroke-linecap:round;
+      stroke-dasharray:326.7;stroke-dashoffset:326.7;transition:stroke-dashoffset .4s ease;}
+    .ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+    .ring-center strong{font-size:1.5rem;color:var(--garnet-dark);line-height:1;}
+    .ring-center span{font-size:.62rem;color:var(--muted);margin-top:2px;letter-spacing:.02em;}
+
+    .question-meta{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--muted);font-size:.9rem;margin-bottom:10px;}
+    .badge{display:inline-block;background:var(--garnet-soft);color:var(--garnet-dark);padding:6px 10px;border-radius:99px;font-weight:800;font-size:.78rem;}
+    .question{font-size:1.25rem;font-weight:800;line-height:1.35;margin:10px 0 16px;}
+    .choices{display:grid;gap:10px;}
+    .choice{width:100%;text-align:left;background:#faf7f8;color:var(--ink);border:2px solid #ead5dd;font-weight:700;}
+    .choice:hover{border-color:var(--garnet);}
+    .choice.sel{border-color:var(--garnet);background:#fdeef3;}
+    .choice.correct{border-color:var(--correct);background:#e7f5ef;color:#064b32;}
+    .choice.wrong{border-color:var(--wrong);background:#fff0ee;color:#6e160f;}
+    .choice:disabled{opacity:1;cursor:default;}
+    .fb-mark{font-weight:900;font-size:1.15rem;}
+    .fb-line{margin-bottom:2px;}
+    .feedback{margin-top:14px;padding:13px;border-radius:16px;display:none;line-height:1.45;}
+    .feedback.correct{display:block;background:#e7f5ef;color:#064b32;border:1px solid #b7e2d1;}
+    .feedback.wrong{display:block;background:#fff0ee;color:#6e160f;border:1px solid #f1b7b2;}
+    .praise{font-size:1.05rem;font-weight:800;}
+    .arabic{direction:rtl;text-align:right;font-family:"Tahoma","Arial",sans-serif;margin-top:6px;font-weight:700;font-size:1.05rem;line-height:1.6;}
+    .controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
     .hidden{display:none!important}
-    .small{
-      color:var(--muted);
-      font-size:.9rem;
-      line-height:1.4;
-    }
-    .review-list{
-      padding-left:18px;
-    }
-    .review-list li{
-      margin:8px 0;
-    }
+    .small{color:var(--muted);font-size:.9rem;line-height:1.4;}
+    #mistakesInfo{margin:6px 0 0;font-weight:700;color:var(--garnet-dark);}
+    .review-list{padding-left:18px;}
+    .review-list li{margin:8px 0;}
+
+    .order-wrap{display:grid;gap:14px;}
+    .section-label{font-weight:800;color:var(--muted);font-size:.82rem;margin-bottom:6px;}
+    .slot-list,.pool-list{display:grid;gap:8px;}
+    .order-slot{border:2px dashed #d9c2cb;border-radius:14px;padding:8px 12px;min-height:48px;display:flex;align-items:center;gap:10px;background:#fbf7f9;}
+    .order-slot .num{font-weight:800;color:var(--garnet);min-width:20px;text-align:center;}
+    .order-slot .filled{flex:1;text-align:left;background:#fff;border:2px solid #ead5dd;border-radius:12px;padding:8px 10px;font-weight:600;cursor:pointer;}
+    .order-slot .empty{flex:1;color:#b7a3ab;font-style:italic;font-size:.9rem;}
+    .order-slot.correct .filled{border-color:var(--correct);background:#e7f5ef;}
+    .order-slot.wrong .filled{border-color:var(--wrong);background:#fff0ee;}
+    .pool-item{background:#faf7f8;color:var(--ink);border:2px solid #ead5dd;border-radius:14px;padding:10px 12px;cursor:pointer;font-weight:600;text-align:left;width:100%;}
+    .pool-item:hover{border-color:var(--garnet);}
+
+    .match-wrap{display:grid;grid-template-columns:1fr 96px;gap:10px;align-items:start;}
+    .match-col{display:grid;gap:8px;}
+    .match-item{border:2px solid #ead5dd;border-radius:14px;padding:10px 12px;background:#faf7f8;cursor:pointer;font-weight:600;text-align:center;position:relative;}
+    .match-left{text-align:left;padding-right:34px;}
+    .match-item.sel{border-color:var(--garnet);background:#fdeef3;}
+    .match-item.done{cursor:default;}
+    .match-item .tag{display:inline-block;min-width:20px;height:20px;line-height:20px;border-radius:50%;background:var(--garnet);color:#fff;font-size:.72rem;font-weight:800;text-align:center;}
+    .match-left .tag{position:absolute;right:10px;top:50%;transform:translateY(-50%);}
+    .match-item.correct{border-color:var(--correct);background:#e7f5ef;}
+    .match-item.wrong{border-color:var(--wrong);background:#fff0ee;}
+
+    #confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:60;display:none;}
+
+    .wordfill-wrap{display:grid;gap:14px;}
+    .wf-item{background:#fbf7f9;border:1px solid #efdbe3;border-radius:14px;padding:10px 12px;}
+    .wf-sentence{font-weight:600;margin-bottom:8px;line-height:1.5;}
+    .wf-blank{display:inline-block;min-width:70px;border-bottom:2px solid var(--garnet);color:var(--garnet-dark);font-weight:800;text-align:center;padding:0 4px;}
+    .wf-choices{display:flex;gap:8px;flex-wrap:wrap;}
+    .wf-chip{background:#faf7f8;color:var(--ink);border:2px solid #ead5dd;border-radius:99px;padding:8px 14px;font-weight:700;cursor:pointer;min-height:0;}
+    .wf-chip:hover{border-color:var(--garnet);}
+    .wf-chip.sel{background:#fdeef3;border-color:var(--garnet);color:var(--garnet-dark);}
+    .wf-chip.correct{background:#e7f5ef;border-color:var(--correct);color:#064b32;}
+    .wf-chip.wrong{background:#fff0ee;border-color:var(--wrong);color:#6e160f;}
+    .wf-chip:disabled{cursor:default;}
+
     @media (max-width:620px){
       .app{padding:12px}
       header,.card{border-radius:18px}
@@ -230,6 +138,7 @@
   </style>
 </head>
 <body>
+  <canvas id="confetti"></canvas>
   <div class="app">
     <header>
       <h1>ENGL111 Final Grammar Review</h1>
@@ -248,14 +157,17 @@
             <option value="endless">Practice until I stop</option>
             <option value="ten">10 questions - 5 minutes</option>
             <option value="twenty">20 questions</option>
+            <option value="review">Review my mistakes</option>
           </select>
         </div>
       </div>
       <div class="controls">
         <button id="startBtn">Start Practice</button>
-        <button id="resetBestBtn" class="secondary">Reset Best Score</button>
+        <button id="soundBtn" class="secondary" type="button">Sound: On</button>
+        <button id="resetBestBtn" class="ghost">Reset Best Score</button>
+        <button id="resetProgressBtn" class="ghost">Reset Progress</button>
       </div>
-      <p class="small">Wrong answers show a short Arabic explanation. Correct answers keep moving quickly.</p>
+      <p id="mistakesInfo" class="small"></p>
     </section>
 
     <section id="game" class="card hidden">
@@ -271,8 +183,14 @@
         <div class="stat"><strong id="count">0</strong><span>Answered</span></div>
       </div>
 
-      <div class="progress-wrap"><div id="progress" class="progress"></div></div>
-      <div class="small" id="progressText"></div>
+      <div class="ring-wrap">
+        <svg class="ring" viewBox="0 0 120 120" width="104" height="104" aria-hidden="true">
+          <circle class="ring-track" cx="60" cy="60" r="52"></circle>
+          <circle id="ringProgress" class="ring-fill" cx="60" cy="60" r="52"></circle>
+        </svg>
+        <div class="ring-center"><strong id="ringNum">0</strong><span id="ringLabel"></span></div>
+      </div>
+      <div class="small" id="progressText" style="text-align:center"></div>
 
       <div id="questionText" class="question"></div>
       <div id="answerArea"></div>
@@ -281,6 +199,7 @@
       <div class="controls">
         <button id="submitBtn">Check</button>
         <button id="nextBtn" class="secondary hidden">Next</button>
+        <button id="resetItemBtn" class="ghost hidden">Reset</button>
         <button id="stopBtn" class="ghost">Stop</button>
       </div>
     </section>
@@ -297,309 +216,197 @@
   </div>
 
   <script>
-    const BANK = [];
-    const AR = {
-      simple:"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.",
-      first:"في الشرط الأول: If + present simple, will + verb.",
-      going:"مع going to نستخدم am/is/are + going to + verb.",
-      will:"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.",
-      perfect:"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.",
-      perfectPast:"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.",
-      should:"بعد should أو shouldn’t نستخدم الفعل الأساسي.",
-      speech:"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة."
-    };
+    const BANK = [{"category":"Simple Present","type":"mcq","prompt":"Maha ___ English every day.","answer":"studies","choices":["study","studies","studying"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-1"},{"category":"Simple Present","type":"mcq","prompt":"They ___ to university by bus.","answer":"go","choices":["go","goes","going"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-2"},{"category":"Simple Present","type":"mcq","prompt":"My brother ___ coffee in the morning.","answer":"drinks","choices":["drink","drinks","drinking"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-3"},{"category":"Simple Present","type":"mcq","prompt":"We ___ in Lusail.","answer":"live","choices":["live","lives","living"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-4"},{"category":"Simple Present","type":"mcq","prompt":"The class ___ at 8 o’clock.","answer":"starts","choices":["start","starts","starting"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-5"},{"category":"Simple Present","type":"mcq","prompt":"I ___ my homework after dinner.","answer":"do","choices":["do","does","doing"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-6"},{"category":"Simple Present","type":"mcq","prompt":"Sara and Noor ___ Arabic and English.","answer":"speak","choices":["speak","speaks","speaking"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-7"},{"category":"Simple Present","type":"mcq","prompt":"The teacher ___ the lesson clearly.","answer":"explains","choices":["explain","explains","explaining"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-8"},{"category":"Simple Present","type":"mcq","prompt":"My phone ___ very well.","answer":"works","choices":["work","works","working"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-9"},{"category":"Simple Present","type":"mcq","prompt":"He ___ football on Friday.","answer":"plays","choices":["play","plays","playing"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-10"},{"category":"Simple Present","type":"mcq","prompt":"Ahmed ___ like fast food.","answer":"doesn’t","choices":["don’t","doesn’t","isn’t"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-11"},{"category":"Simple Present","type":"mcq","prompt":"They ___ watch TV before exams.","answer":"don’t","choices":["doesn’t","don’t","aren’t"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-12"},{"category":"Simple Present","type":"mcq","prompt":"___ she live near the university?","answer":"Does","choices":["Do","Does","Is"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-13"},{"category":"Simple Present","type":"mcq","prompt":"___ you study in the library?","answer":"Do","choices":["Do","Does","Are"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-14"},{"category":"Simple Present","type":"mcq","prompt":"My parents ___ work on Saturday.","answer":"don’t","choices":["doesn’t","don’t","aren’t"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-15"},{"category":"Simple Present","type":"mcq","prompt":"The restaurant ___ at 11 p.m.","answer":"closes","choices":["close","closes","closing"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-16"},{"category":"Simple Present","type":"mcq","prompt":"Water ___ at 100°C.","answer":"boils","choices":["boil","boils","boiling"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-17"},{"category":"Simple Present","type":"mcq","prompt":"The students ___ ready for the exam.","answer":"are","choices":["is","are","am"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-18"},{"category":"Simple Present","type":"mcq","prompt":"He ___ not late today.","answer":"is","choices":["is","are","does"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-19"},{"category":"Simple Present","type":"mcq","prompt":"___ they in the same study group?","answer":"Are","choices":["Is","Are","Do"],"explanation":"في المضارع البسيط: he/she/it يأخذ الفعل s. في النفي والسؤال نستخدم do/does.","id":"simple-present-20"},{"category":"First Conditional","type":"mcq","prompt":"If you study tonight, you ___ better tomorrow.","answer":"will feel","choices":["feel","will feel","felt"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-1"},{"category":"First Conditional","type":"mcq","prompt":"If it rains, we ___ at home.","answer":"will stay","choices":["will stay","stay","stayed"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-2"},{"category":"First Conditional","type":"mcq","prompt":"You will miss the bus if you ___ late.","answer":"are","choices":["will be","are","were"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-3"},{"category":"First Conditional","type":"mcq","prompt":"If she saves money, she ___ a new laptop.","answer":"will buy","choices":["buys","will buy","bought"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-4"},{"category":"First Conditional","type":"mcq","prompt":"If they work hard, they ___ the project.","answer":"will finish","choices":["finish","will finish","finished"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-5"},{"category":"First Conditional","type":"mcq","prompt":"If I have time, I ___ you.","answer":"will call","choices":["call","will call","called"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-6"},{"category":"First Conditional","type":"mcq","prompt":"He will be tired if he ___ late.","answer":"sleeps","choices":["will sleep","sleep","sleeps"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-7"},{"category":"First Conditional","type":"mcq","prompt":"If we leave now, we ___ on time.","answer":"will arrive","choices":["arrive","will arrive","arrived"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-8"},{"category":"First Conditional","type":"mcq","prompt":"If you eat too much sugar, you ___ sick.","answer":"will feel","choices":["feel","will feel","felt"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-9"},{"category":"First Conditional","type":"mcq","prompt":"If the teacher explains it again, I ___ understand.","answer":"will","choices":["will","do","am"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-10"},{"category":"First Conditional","type":"mcq","prompt":"If I ___ enough money, I will buy a new phone.","answer":"have","choices":["will have","have","had"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-11"},{"category":"First Conditional","type":"mcq","prompt":"If she ___ the exam, her family will be happy.","answer":"passes","choices":["will pass","passes","passed"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-12"},{"category":"First Conditional","type":"mcq","prompt":"If they don’t listen, they ___ the instructions.","answer":"won’t understand","choices":["don’t understand","won’t understand","didn’t understand"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-13"},{"category":"First Conditional","type":"mcq","prompt":"We won’t go outside if it ___ too hot.","answer":"is","choices":["will be","is","was"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-14"},{"category":"First Conditional","type":"mcq","prompt":"If you practice every day, your English ___ improve.","answer":"will","choices":["does","will","is"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-15"},{"category":"First Conditional","type":"mcq","prompt":"If Omar forgets his ID, he ___ enter the building.","answer":"won’t","choices":["doesn’t","won’t","isn’t"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-16"},{"category":"First Conditional","type":"mcq","prompt":"If the café is open, we ___ coffee there.","answer":"will get","choices":["get","will get","got"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-17"},{"category":"First Conditional","type":"mcq","prompt":"You will do well if you ___ carefully.","answer":"read","choices":["will read","read","reads"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-18"},{"category":"First Conditional","type":"mcq","prompt":"If she feels better, she ___ to class.","answer":"will come","choices":["comes","will come","came"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-19"},{"category":"First Conditional","type":"mcq","prompt":"If we finish early, we ___ a short break.","answer":"will take","choices":["take","will take","took"],"explanation":"في الشرط الأول: If + present simple, will + verb.","id":"first-conditional-20"},{"category":"Be Going To","type":"mcq","prompt":"I ___ going to visit my cousin tonight.","answer":"am","choices":["am","is","are"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-1"},{"category":"Be Going To","type":"mcq","prompt":"She ___ going to apply for a job.","answer":"is","choices":["am","is","are"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-2"},{"category":"Be Going To","type":"mcq","prompt":"They ___ going to watch a movie.","answer":"are","choices":["am","is","are"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-3"},{"category":"Be Going To","type":"mcq","prompt":"___ you going to study after class?","answer":"Are","choices":["Am","Is","Are"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-4"},{"category":"Be Going To","type":"mcq","prompt":"He is going to ___ his room.","answer":"clean","choices":["cleans","clean","cleaning"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-5"},{"category":"Be Going To","type":"mcq","prompt":"We are going to ___ a presentation tomorrow.","answer":"give","choices":["give","gives","giving"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-6"},{"category":"Be Going To","type":"mcq","prompt":"My sister ___ going to start university next year.","answer":"is","choices":["am","is","are"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-7"},{"category":"Be Going To","type":"mcq","prompt":"Ali and Hamad ___ going to play football.","answer":"are","choices":["am","is","are"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-8"},{"category":"Be Going To","type":"mcq","prompt":"I am not going to ___ late tonight.","answer":"sleep","choices":["sleep","sleeps","sleeping"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-9"},{"category":"Be Going To","type":"mcq","prompt":"Is she going to ___ her friend?","answer":"call","choices":["calls","call","calling"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-10"},{"category":"Be Going To","type":"mcq","prompt":"The students are going to ___ for the final exam.","answer":"review","choices":["reviews","review","reviewing"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-11"},{"category":"Be Going To","type":"mcq","prompt":"We ___ going to cook dinner at home.","answer":"are","choices":["am","is","are"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-12"},{"category":"Be Going To","type":"mcq","prompt":"Maha is going to ___ a cover letter.","answer":"write","choices":["write","writes","writing"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-13"},{"category":"Be Going To","type":"mcq","prompt":"Are they going to ___ in the library?","answer":"meet","choices":["meet","meets","meeting"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-14"},{"category":"Be Going To","type":"mcq","prompt":"He ___ not going to buy fast food today.","answer":"is","choices":["am","is","are"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-15"},{"category":"Be Going To","type":"mcq","prompt":"I am going to ___ more water.","answer":"drink","choices":["drink","drinks","drinking"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-16"},{"category":"Be Going To","type":"mcq","prompt":"The company is going to ___ new employees.","answer":"recruit","choices":["recruit","recruits","recruiting"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-17"},{"category":"Be Going To","type":"mcq","prompt":"We are not going to ___ the test tomorrow.","answer":"take","choices":["take","takes","taking"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-18"},{"category":"Be Going To","type":"mcq","prompt":"___ Ahmed going to send the email?","answer":"Is","choices":["Am","Is","Are"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-19"},{"category":"Be Going To","type":"mcq","prompt":"You are going to ___ confident after practice.","answer":"feel","choices":["feel","feels","feeling"],"explanation":"مع going to نستخدم am/is/are + going to + verb.","id":"be-going-to-20"},{"category":"Will / Won’t","type":"mcq","prompt":"I will ___ you after class.","answer":"call","choices":["calls","call","calling"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-1"},{"category":"Will / Won’t","type":"mcq","prompt":"She won’t ___ late tomorrow.","answer":"arrive","choices":["arrives","arrive","arriving"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-2"},{"category":"Will / Won’t","type":"mcq","prompt":"Will they ___ dinner at home?","answer":"have","choices":["has","have","having"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-3"},{"category":"Will / Won’t","type":"mcq","prompt":"We will ___ the project today.","answer":"finish","choices":["finish","finishes","finishing"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-4"},{"category":"Will / Won’t","type":"mcq","prompt":"He will ___ a new job soon.","answer":"start","choices":["starts","start","starting"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-5"},{"category":"Will / Won’t","type":"mcq","prompt":"Will you ___ the report tonight?","answer":"complete","choices":["complete","completes","completing"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-6"},{"category":"Will / Won’t","type":"mcq","prompt":"They will ___ football after school.","answer":"play","choices":["play","plays","playing"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-7"},{"category":"Will / Won’t","type":"mcq","prompt":"My parents won’t ___ this weekend.","answer":"travel","choices":["travels","travel","traveling"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-8"},{"category":"Will / Won’t","type":"mcq","prompt":"The teacher will ___ the grades later.","answer":"post","choices":["posts","post","posting"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-9"},{"category":"Will / Won’t","type":"mcq","prompt":"Will she ___ the exam next week?","answer":"take","choices":["takes","take","taking"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-10"},{"category":"Will / Won’t","type":"mcq","prompt":"I think Doha will ___ bigger in the future.","answer":"become","choices":["becomes","become","becoming"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-11"},{"category":"Will / Won’t","type":"mcq","prompt":"We won’t ___ fast food tonight.","answer":"eat","choices":["eats","eat","eating"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-12"},{"category":"Will / Won’t","type":"mcq","prompt":"The weather will ___ cooler in December.","answer":"get","choices":["gets","get","getting"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-13"},{"category":"Will / Won’t","type":"mcq","prompt":"Will Omar ___ the team meeting?","answer":"join","choices":["joins","join","joining"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-14"},{"category":"Will / Won’t","type":"mcq","prompt":"She will ___ a message when she arrives.","answer":"send","choices":["sends","send","sending"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-15"},{"category":"Will / Won’t","type":"mcq","prompt":"They won’t ___ the old layout.","answer":"change","choices":["changes","change","changing"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-16"},{"category":"Will / Won’t","type":"mcq","prompt":"I will ___ harder next time.","answer":"try","choices":["tries","try","trying"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-17"},{"category":"Will / Won’t","type":"mcq","prompt":"Will the café ___ at 7 a.m.?","answer":"open","choices":["opens","open","opening"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-18"},{"category":"Will / Won’t","type":"mcq","prompt":"This app will ___ you review grammar.","answer":"help","choices":["helps","help","helping"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-19"},{"category":"Will / Won’t","type":"mcq","prompt":"He won’t ___ his phone during class.","answer":"use","choices":["uses","use","using"],"explanation":"بعد will أو won’t نستخدم الفعل الأساسي بدون s أو ing.","id":"will-won-t-20"},{"category":"Present Perfect","type":"mcq","prompt":"She ___ finished her homework already.","answer":"has","choices":["has","have","is"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-1"},{"category":"Present Perfect","type":"mcq","prompt":"They ___ visited Turkey before.","answer":"have","choices":["has","have","are"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-2"},{"category":"Present Perfect","type":"mcq","prompt":"I have never ___ sushi.","answer":"eaten","choices":["eat","ate","eaten"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-3"},{"category":"Present Perfect","type":"mcq","prompt":"He has ___ his keys.","answer":"lost","choices":["lose","lost","losing"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-4"},{"category":"Present Perfect","type":"mcq","prompt":"We have lived here ___ 2022.","answer":"since","choices":["for","since","ago"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-5"},{"category":"Present Perfect","type":"mcq","prompt":"Mona has studied English ___ six years.","answer":"for","choices":["for","since","last"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-6"},{"category":"Present Perfect","type":"mcq","prompt":"Have you ___ seen snow?","answer":"ever","choices":["ever","yet","since"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-7"},{"category":"Present Perfect","type":"mcq","prompt":"They haven’t finished the project ___.","answer":"yet","choices":["already","yet","ever"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-8"},{"category":"Present Perfect","type":"mcq","prompt":"My brother has just ___ home.","answer":"arrived","choices":["arrive","arrived","arriving"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-9"},{"category":"Present Perfect","type":"mcq","prompt":"How many books have you ___ this year?","answer":"read","choices":["read","reads","reading"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-10"},{"category":"Present Perfect","type":"mcq","prompt":"She has never ___ a horse.","answer":"ridden","choices":["ride","rode","ridden"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-11"},{"category":"Present Perfect","type":"mcq","prompt":"We have already ___ lunch.","answer":"had","choices":["have","had","having"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-12"},{"category":"Present Perfect","type":"mcq","prompt":"Has Ahmed ___ his application?","answer":"sent","choices":["send","sent","sending"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-13"},{"category":"Present Perfect","type":"mcq","prompt":"I haven’t ___ that movie before.","answer":"seen","choices":["see","saw","seen"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-14"},{"category":"Present Perfect","type":"mcq","prompt":"They have ___ in the same company for two years.","answer":"worked","choices":["work","worked","working"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-15"},{"category":"Present Perfect","type":"mcq","prompt":"The manager has ___ the new employee.","answer":"met","choices":["meet","met","meeting"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-16"},{"category":"Present Perfect","type":"mcq","prompt":"Have you done your homework ___?","answer":"yet","choices":["yet","already","since"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-17"},{"category":"Present Perfect","type":"mcq","prompt":"She has ___ three emails so far today.","answer":"written","choices":["write","wrote","written"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-18"},{"category":"Present Perfect","type":"mcq","prompt":"We have not ___ the instructions.","answer":"understood","choices":["understand","understood","understanding"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-19"},{"category":"Present Perfect","type":"mcq","prompt":"He has ___ to Qatar many times.","answer":"been","choices":["be","was","been"],"explanation":"المضارع التام: have/has + التصريف الثالث. نستخدم has مع he/she/it.","id":"present-perfect-20"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"I ___ sushi three times this week.","answer":"have eaten","choices":["ate","have eaten","eat"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-1"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"We ___ to the mall last Saturday.","answer":"went","choices":["went","have gone","go"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-2"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"Ahmed has never ___ in the ocean.","answer":"swum","choices":["swam","swum","swim"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-3"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"She ___ five emails so far today.","answer":"has written","choices":["wrote","has written","writes"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-4"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"They ___ the new manager yesterday.","answer":"met","choices":["met","have met","meet"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-5"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"I ___ my keys and I still can’t find them.","answer":"have lost","choices":["lost","have lost","lose"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-6"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"My phone ___ when it fell this morning.","answer":"broke","choices":["has broken","broke","breaks"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-7"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"Mona has already ___ her homework.","answer":"done","choices":["did","done","does"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-8"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"We ___ that movie in 2021.","answer":"saw","choices":["have seen","saw","see"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-9"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"He ___ in Spain for two months and he loves it.","answer":"has been","choices":["was","has been","is"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-10"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"I ___ my friend three days ago.","answer":"met","choices":["met","have met","meet"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-11"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"They ___ twelve times so far this year.","answer":"have met","choices":["met","have met","meet"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-12"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"Last week, we ___ a new restaurant.","answer":"tried","choices":["have tried","tried","try"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-13"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"She ___ many medals since 2017.","answer":"has won","choices":["won","has won","wins"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-14"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"Yesterday, he ___ a personal record.","answer":"hit","choices":["has hit","hit","hits"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-15"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"I ___ never ___ such spicy food.","answer":"have eaten","choices":["ate","have eaten","eat"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-16"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"Two days ago, Omar ___ to the desert.","answer":"went","choices":["has gone","went","goes"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-17"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"Since then, people ___ many photos online.","answer":"have bought","choices":["bought","have bought","buy"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-18"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"My father ___ his ankle yesterday.","answer":"injured","choices":["has injured","injured","injures"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-19"},{"category":"Present Perfect vs. Past Simple","type":"mcq","prompt":"She ___ more careful since the accident.","answer":"has been","choices":["was","has been","is"],"explanation":"استخدم الماضي البسيط مع وقت منتهٍ مثل yesterday/last/ago/in 2021. استخدم المضارع التام مع ever/never/yet/already/for/since/so far.","id":"present-perfect-vs-past-simple-20"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"Students shouldn’t ___ during an online test.","answer":"cheat","choices":["cheating","cheat","cheats"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-1"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"You should ___ more water every day.","answer":"drink","choices":["drink","drinks","drinking"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-2"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"He should ___ early to catch the bus.","answer":"leave","choices":["leave","leaves","leaving"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-3"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"They shouldn’t ___ music loudly at night.","answer":"play","choices":["playing","play","plays"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-4"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"Should I ___ the email now?","answer":"send","choices":["send","sends","sending"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-5"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"People should ___ kind to each other.","answer":"be","choices":["are","be","being"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-6"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"You shouldn’t ___ your phone during class.","answer":"use","choices":["using","use","uses"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-7"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"We should ___ our homework before dinner.","answer":"do","choices":["do","does","doing"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-8"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"She should ___ a warm jacket.","answer":"bring","choices":["brings","bring","bringing"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-9"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"You should not ___ fast food every day.","answer":"eat","choices":["eat","eats","eating"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-10"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"A team leader should ___ clearly.","answer":"communicate","choices":["communicates","communicate","communicating"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-11"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"You should ___ your answers before you submit.","answer":"check","choices":["checks","check","checking"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-12"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"Students shouldn’t ___ late to presentations.","answer":"come","choices":["comes","come","coming"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-13"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"He should ___ for the interview.","answer":"prepare","choices":["prepare","prepares","preparing"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-14"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"We should ___ with our group members.","answer":"cooperate","choices":["cooperate","cooperates","cooperating"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-15"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"You shouldn’t ___ all night before the exam.","answer":"study","choices":["studies","study","studying"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-16"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"Should they ___ the teacher for help?","answer":"ask","choices":["ask","asks","asking"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-17"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"She should ___ a healthy lifestyle.","answer":"maintain","choices":["maintain","maintains","maintaining"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-18"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"You should ___ on the question carefully.","answer":"concentrate","choices":["concentrates","concentrate","concentrating"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-19"},{"category":"Should / Shouldn’t","type":"mcq","prompt":"He shouldn’t ___ too much coffee at night.","answer":"drink","choices":["drinks","drink","drinking"],"explanation":"بعد should أو shouldn’t نستخدم الفعل الأساسي.","id":"should-shouldn-t-20"},{"category":"Parts of Speech","type":"mcq","prompt":"Good ___ is important in teamwork.","answer":"communication","choices":["communicate","communication","communicative"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-1"},{"category":"Parts of Speech","type":"mcq","prompt":"Our team worked ___ to finish the project.","answer":"collaboratively","choices":["collaborative","collaboration","collaboratively"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-2"},{"category":"Parts of Speech","type":"mcq","prompt":"The manager tries to ___ the team.","answer":"motivate","choices":["motivate","motivation","motivating"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-3"},{"category":"Parts of Speech","type":"mcq","prompt":"She is very ___ and helps her colleagues.","answer":"supportive","choices":["support","supportive","supportively"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-4"},{"category":"Parts of Speech","type":"mcq","prompt":"Strong ___ skills help leaders succeed.","answer":"organisation","choices":["organise","organisation","organised"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-5"},{"category":"Parts of Speech","type":"mcq","prompt":"A good leader must be ___.","answer":"responsible","choices":["responsibility","responsible","responsibly"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-6"},{"category":"Parts of Speech","type":"mcq","prompt":"The company needs better ___ between departments.","answer":"communication","choices":["communicate","communication","communicatively"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-7"},{"category":"Parts of Speech","type":"mcq","prompt":"He works ___ with his team.","answer":"supportively","choices":["support","supportive","supportively"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-8"},{"category":"Parts of Speech","type":"mcq","prompt":"The ___ of the project was successful.","answer":"management","choices":["manage","management","managerial"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-9"},{"category":"Parts of Speech","type":"mcq","prompt":"She is very ___ when she speaks in meetings.","answer":"motivating","choices":["motivate","motivation","motivating"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-10"},{"category":"Parts of Speech","type":"mcq","prompt":"Good ___ helps teams achieve their goals.","answer":"collaboration","choices":["collaborate","collaboration","collaborative"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-11"},{"category":"Parts of Speech","type":"mcq","prompt":"He decided to ___ the group discussion.","answer":"lead","choices":["leadership","leader","lead"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-12"},{"category":"Parts of Speech","type":"mcq","prompt":"The teacher spoke ___ and clearly.","answer":"communicatively","choices":["communicate","communicative","communicatively"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-13"},{"category":"Parts of Speech","type":"mcq","prompt":"A strong ___ can improve team performance.","answer":"leader","choices":["leader","lead","leading"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-14"},{"category":"Parts of Speech","type":"mcq","prompt":"He has great ___ skills.","answer":"managerial","choices":["managerial","management","manage"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-15"},{"category":"Parts of Speech","type":"mcq","prompt":"The students gave a ___ answer.","answer":"detailed","choices":["detail","detailed","details"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-16"},{"category":"Parts of Speech","type":"mcq","prompt":"Her ___ helped the team continue.","answer":"motivation","choices":["motivate","motivation","motivating"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-17"},{"category":"Parts of Speech","type":"mcq","prompt":"They need to ___ the office layout.","answer":"organise","choices":["organisation","organise","organised"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-18"},{"category":"Parts of Speech","type":"mcq","prompt":"The team made a ___ decision.","answer":"collaborative","choices":["collaborate","collaboration","collaborative"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-19"},{"category":"Parts of Speech","type":"mcq","prompt":"He answered the question ___.","answer":"confidently","choices":["confident","confidence","confidently"],"explanation":"اختر شكل الكلمة المناسب: اسم، فعل، صفة، أو حال حسب مكانها في الجملة.","id":"parts-of-speech-20"}];
 
-    function add(category, type, prompt, answer, choices, explanation){
-      BANK.push({category,type,prompt,answer,choices,explanation});
-    }
+    /* ---------- safe storage (never throws; falls back to in-memory) ---------- */
+    const store = (function(){
+      let ok = true;
+      try { const k = "__engl111_t"; window.localStorage.setItem(k, "1"); window.localStorage.removeItem(k); }
+      catch(e){ ok = false; }
+      const mem = {};
+      return {
+        get(k){ try { return ok ? window.localStorage.getItem(k) : (k in mem ? mem[k] : null); } catch(e){ return (k in mem ? mem[k] : null); } },
+        set(k,v){ try { if(ok) window.localStorage.setItem(k, String(v)); else mem[k] = String(v); } catch(e){ mem[k] = String(v); } },
+        remove(k){ try { if(ok) window.localStorage.removeItem(k); else delete mem[k]; } catch(e){ delete mem[k]; } }
+      };
+    })();
 
-    function buildBank(){
-      const simpleItems = [
-        ["Maha ___ English every day.","studies",["study","studies","studying"]],
-        ["They ___ to university by bus.","go",["go","goes","going"]],
-        ["My brother ___ coffee in the morning.","drinks",["drink","drinks","drinking"]],
-        ["We ___ in Lusail.","live",["live","lives","living"]],
-        ["The class ___ at 8 o’clock.","starts",["start","starts","starting"]],
-        ["I ___ my homework after dinner.","do",["do","does","doing"]],
-        ["Sara and Noor ___ Arabic and English.","speak",["speak","speaks","speaking"]],
-        ["The teacher ___ the lesson clearly.","explains",["explain","explains","explaining"]],
-        ["My phone ___ very well.","works",["work","works","working"]],
-        ["He ___ football on Friday.","plays",["play","plays","playing"]],
-        ["Ahmed ___ like fast food.","doesn’t",["don’t","doesn’t","isn’t"]],
-        ["They ___ watch TV before exams.","don’t",["doesn’t","don’t","aren’t"]],
-        ["___ she live near the university?","Does",["Do","Does","Is"]],
-        ["___ you study in the library?","Do",["Do","Does","Are"]],
-        ["My parents ___ work on Saturday.","don’t",["doesn’t","don’t","aren’t"]],
-        ["The restaurant ___ at 11 p.m.","closes",["close","closes","closing"]],
-        ["Water ___ at 100°C.","boils",["boil","boils","boiling"]],
-        ["The students ___ ready for the exam.","are",["is","are","am"]],
-        ["He ___ not late today.","is",["is","are","does"]],
-        ["___ they in the same study group?","Are",["Is","Are","Do"]]
-      ];
-      simpleItems.forEach(q=>add("Simple Present", "mcq", q[0], q[1], q[2], AR.simple));
-
-      const firstItems = [
-        ["If you study tonight, you ___ better tomorrow.","will feel",["feel","will feel","felt"]],
-        ["If it rains, we ___ at home.","will stay",["will stay","stay","stayed"]],
-        ["You will miss the bus if you ___ late.","are",["will be","are","were"]],
-        ["If she saves money, she ___ a new laptop.","will buy",["buys","will buy","bought"]],
-        ["If they work hard, they ___ the project.","will finish",["finish","will finish","finished"]],
-        ["If I have time, I ___ you.","will call",["call","will call","called"]],
-        ["He will be tired if he ___ late.","sleeps",["will sleep","sleep","sleeps"]],
-        ["If we leave now, we ___ on time.","will arrive",["arrive","will arrive","arrived"]],
-        ["If you eat too much sugar, you ___ sick.","will feel",["feel","will feel","felt"]],
-        ["If the teacher explains it again, I ___ understand.","will",["will","do","am"]],
-        ["If I ___ enough money, I will buy a new phone.","have",["will have","have","had"]],
-        ["If she ___ the exam, her family will be happy.","passes",["will pass","passes","passed"]],
-        ["If they don’t listen, they ___ the instructions.","won’t understand",["don’t understand","won’t understand","didn’t understand"]],
-        ["We won’t go outside if it ___ too hot.","is",["will be","is","was"]],
-        ["If you practice every day, your English ___ improve.","will",["does","will","is"]],
-        ["If Omar forgets his ID, he ___ enter the building.","won’t",["doesn’t","won’t","isn’t"]],
-        ["If the café is open, we ___ coffee there.","will get",["get","will get","got"]],
-        ["You will do well if you ___ carefully.","read",["will read","read","reads"]],
-        ["If she feels better, she ___ to class.","will come",["comes","will come","came"]],
-        ["If we finish early, we ___ a short break.","will take",["take","will take","took"]]
-      ];
-      firstItems.forEach(q=>add("First Conditional", "mcq", q[0], q[1], q[2], AR.first));
-
-      const goingItems = [
-        ["I ___ going to visit my cousin tonight.","am",["am","is","are"]],
-        ["She ___ going to apply for a job.","is",["am","is","are"]],
-        ["They ___ going to watch a movie.","are",["am","is","are"]],
-        ["___ you going to study after class?","Are",["Am","Is","Are"]],
-        ["He is going to ___ his room.","clean",["cleans","clean","cleaning"]],
-        ["We are going to ___ a presentation tomorrow.","give",["give","gives","giving"]],
-        ["My sister ___ going to start university next year.","is",["am","is","are"]],
-        ["Ali and Hamad ___ going to play football.","are",["am","is","are"]],
-        ["I am not going to ___ late tonight.","sleep",["sleep","sleeps","sleeping"]],
-        ["Is she going to ___ her friend?","call",["calls","call","calling"]],
-        ["The students are going to ___ for the final exam.","review",["reviews","review","reviewing"]],
-        ["We ___ going to cook dinner at home.","are",["am","is","are"]],
-        ["Maha is going to ___ a cover letter.","write",["write","writes","writing"]],
-        ["Are they going to ___ in the library?","meet",["meet","meets","meeting"]],
-        ["He ___ not going to buy fast food today.","is",["am","is","are"]],
-        ["I am going to ___ more water.","drink",["drink","drinks","drinking"]],
-        ["The company is going to ___ new employees.","recruit",["recruit","recruits","recruiting"]],
-        ["We are not going to ___ the test tomorrow.","take",["take","takes","taking"]],
-        ["___ Ahmed going to send the email?","Is",["Am","Is","Are"]],
-        ["You are going to ___ confident after practice.","feel",["feel","feels","feeling"]]
-      ];
-      goingItems.forEach(q=>add("Be Going To", "mcq", q[0], q[1], q[2], AR.going));
-
-      const willItems = [
-        ["I will ___ you after class.","call",["calls","call","calling"]],
-        ["She won’t ___ late tomorrow.","arrive",["arrives","arrive","arriving"]],
-        ["Will they ___ dinner at home?","have",["has","have","having"]],
-        ["We will ___ the project today.","finish",["finish","finishes","finishing"]],
-        ["He will ___ a new job soon.","start",["starts","start","starting"]],
-        ["Will you ___ the report tonight?","complete",["complete","completes","completing"]],
-        ["They will ___ football after school.","play",["play","plays","playing"]],
-        ["My parents won’t ___ this weekend.","travel",["travels","travel","traveling"]],
-        ["The teacher will ___ the grades later.","post",["posts","post","posting"]],
-        ["Will she ___ the exam next week?","take",["takes","take","taking"]],
-        ["I think Doha will ___ bigger in the future.","become",["becomes","become","becoming"]],
-        ["We won’t ___ fast food tonight.","eat",["eats","eat","eating"]],
-        ["The weather will ___ cooler in December.","get",["gets","get","getting"]],
-        ["Will Omar ___ the team meeting?","join",["joins","join","joining"]],
-        ["She will ___ a message when she arrives.","send",["sends","send","sending"]],
-        ["They won’t ___ the old layout.","change",["changes","change","changing"]],
-        ["I will ___ harder next time.","try",["tries","try","trying"]],
-        ["Will the café ___ at 7 a.m.?","open",["opens","open","opening"]],
-        ["This app will ___ you review grammar.","help",["helps","help","helping"]],
-        ["He won’t ___ his phone during class.","use",["uses","use","using"]]
-      ];
-      willItems.forEach(q=>add("Will / Won’t", "mcq", q[0], q[1], q[2], AR.will));
-
-      const perfectItems = [
-        ["She ___ finished her homework already.","has",["has","have","is"]],
-        ["They ___ visited Turkey before.","have",["has","have","are"]],
-        ["I have never ___ sushi.","eaten",["eat","ate","eaten"]],
-        ["He has ___ his keys.","lost",["lose","lost","losing"]],
-        ["We have lived here ___ 2022.","since",["for","since","ago"]],
-        ["Mona has studied English ___ six years.","for",["for","since","last"]],
-        ["Have you ___ seen snow?","ever",["ever","yet","since"]],
-        ["They haven’t finished the project ___.","yet",["already","yet","ever"]],
-        ["My brother has just ___ home.","arrived",["arrive","arrived","arriving"]],
-        ["How many books have you ___ this year?","read",["read","reads","reading"]],
-        ["She has never ___ a horse.","ridden",["ride","rode","ridden"]],
-        ["We have already ___ lunch.","had",["have","had","having"]],
-        ["Has Ahmed ___ his application?","sent",["send","sent","sending"]],
-        ["I haven’t ___ that movie before.","seen",["see","saw","seen"]],
-        ["They have ___ in the same company for two years.","worked",["work","worked","working"]],
-        ["The manager has ___ the new employee.","met",["meet","met","meeting"]],
-        ["Have you done your homework ___?","yet",["yet","already","since"]],
-        ["She has ___ three emails so far today.","written",["write","wrote","written"]],
-        ["We have not ___ the instructions.","understood",["understand","understood","understanding"]],
-        ["He has ___ to Qatar many times.","been",["be","was","been"]]
-      ];
-      perfectItems.forEach(q=>add("Present Perfect", "mcq", q[0], q[1], q[2], AR.perfect));
-
-      const ppPastItems = [
-        ["I ___ sushi three times this week.","have eaten",["ate","have eaten","eat"]],
-        ["We ___ to the mall last Saturday.","went",["went","have gone","go"]],
-        ["Ahmed has never ___ in the ocean.","swum",["swam","swum","swim"]],
-        ["She ___ five emails so far today.","has written",["wrote","has written","writes"]],
-        ["They ___ the new manager yesterday.","met",["met","have met","meet"]],
-        ["I ___ my keys and I still can’t find them.","have lost",["lost","have lost","lose"]],
-        ["My phone ___ when it fell this morning.","broke",["has broken","broke","breaks"]],
-        ["Mona has already ___ her homework.","done",["did","done","does"]],
-        ["We ___ that movie in 2021.","saw",["have seen","saw","see"]],
-        ["He ___ in Spain for two months and he loves it.","has been",["was","has been","is"]],
-        ["I ___ my friend three days ago.","met",["met","have met","meet"]],
-        ["They ___ twelve times so far this year.","have met",["met","have met","meet"]],
-        ["Last week, we ___ a new restaurant.","tried",["have tried","tried","try"]],
-        ["She ___ many medals since 2017.","has won",["won","has won","wins"]],
-        ["Yesterday, he ___ a personal record.","hit",["has hit","hit","hits"]],
-        ["I ___ never ___ such spicy food.","have eaten",["ate","have eaten","eat"]],
-        ["Two days ago, Omar ___ to the desert.","went",["has gone","went","goes"]],
-        ["Since then, people ___ many photos online.","have bought",["bought","have bought","buy"]],
-        ["My father ___ his ankle yesterday.","injured",["has injured","injured","injures"]],
-        ["She ___ more careful since the accident.","has been",["was","has been","is"]]
-      ];
-      ppPastItems.forEach(q=>add("Present Perfect vs. Past Simple", "mcq", q[0], q[1], q[2], AR.perfectPast));
-
-      const shouldItems = [
-        ["Students shouldn’t ___ during an online test.","cheat",["cheating","cheat","cheats"]],
-        ["You should ___ more water every day.","drink",["drink","drinks","drinking"]],
-        ["He should ___ early to catch the bus.","leave",["leave","leaves","leaving"]],
-        ["They shouldn’t ___ music loudly at night.","play",["playing","play","plays"]],
-        ["Should I ___ the email now?","send",["send","sends","sending"]],
-        ["People should ___ kind to each other.","be",["are","be","being"]],
-        ["You shouldn’t ___ your phone during class.","use",["using","use","uses"]],
-        ["We should ___ our homework before dinner.","do",["do","does","doing"]],
-        ["She should ___ a warm jacket.","bring",["brings","bring","bringing"]],
-        ["You should not ___ fast food every day.","eat",["eat","eats","eating"]],
-        ["A team leader should ___ clearly.","communicate",["communicates","communicate","communicating"]],
-        ["You should ___ your answers before you submit.","check",["checks","check","checking"]],
-        ["Students shouldn’t ___ late to presentations.","come",["comes","come","coming"]],
-        ["He should ___ for the interview.","prepare",["prepare","prepares","preparing"]],
-        ["We should ___ with our group members.","cooperate",["cooperate","cooperates","cooperating"]],
-        ["You shouldn’t ___ all night before the exam.","study",["studies","study","studying"]],
-        ["Should they ___ the teacher for help?","ask",["ask","asks","asking"]],
-        ["She should ___ a healthy lifestyle.","maintain",["maintain","maintains","maintaining"]],
-        ["You should ___ on the question carefully.","concentrate",["concentrates","concentrate","concentrating"]],
-        ["He shouldn’t ___ too much coffee at night.","drink",["drinks","drink","drinking"]]
-      ];
-      shouldItems.forEach(q=>add("Should / Shouldn’t", "mcq", q[0], q[1], q[2], AR.should));
-
-      const speechItems = [
-        ["Good ___ is important in teamwork.","communication",["communicate","communication","communicative"]],
-        ["Our team worked ___ to finish the project.","collaboratively",["collaborative","collaboration","collaboratively"]],
-        ["The manager tries to ___ the team.","motivate",["motivate","motivation","motivating"]],
-        ["She is very ___ and helps her colleagues.","supportive",["support","supportive","supportively"]],
-        ["Strong ___ skills help leaders succeed.","organisation",["organise","organisation","organised"]],
-        ["A good leader must be ___.","responsible",["responsibility","responsible","responsibly"]],
-        ["The company needs better ___ between departments.","communication",["communicate","communication","communicatively"]],
-        ["He works ___ with his team.","supportively",["support","supportive","supportively"]],
-        ["The ___ of the project was successful.","management",["manage","management","managerial"]],
-        ["She is very ___ when she speaks in meetings.","motivating",["motivate","motivation","motivating"]],
-        ["Good ___ helps teams achieve their goals.","collaboration",["collaborate","collaboration","collaborative"]],
-        ["He decided to ___ the group discussion.","lead",["leadership","leader","lead"]],
-        ["The teacher spoke ___ and clearly.","communicatively",["communicate","communicative","communicatively"]],
-        ["A strong ___ can improve team performance.","leader",["leader","lead","leading"]],
-        ["He has great ___ skills.","managerial",["managerial","management","manage"]],
-        ["The students gave a ___ answer.","detailed",["detail","detailed","details"]],
-        ["Her ___ helped the team continue.","motivation",["motivate","motivation","motivating"]],
-        ["They need to ___ the office layout.","organise",["organisation","organise","organised"]],
-        ["The team made a ___ decision.","collaborative",["collaborate","collaboration","collaborative"]],
-        ["He answered the question ___.","confidently",["confident","confidence","confidently"]]
-      ];
-      speechItems.forEach(q=>add("Parts of Speech", "mcq", q[0], q[1], q[2], AR.speech));
-
-      // All questions remain multiple choice for easier mobile practice.
-    }
-
-    buildBank();
-
+    /* ---------- element refs ---------- */
     const categorySelect = document.getElementById("category");
     const categories = ["All Grammar", ...new Set(BANK.map(q=>q.category))];
     categories.forEach(c=>{
       const opt=document.createElement("option");
-      opt.value=c; opt.textContent=c;
-      categorySelect.appendChild(opt);
+      opt.value=c; opt.textContent=c; categorySelect.appendChild(opt);
     });
-
-    let session = {
-      questions:[], index:0, score:0, streak:0, answered:0, checked:false,
-      max:null, timer:null, timeLeft:0, mode:"endless", current:null, missed:[]
-    };
 
     const els = {
       setup:document.getElementById("setup"), game:document.getElementById("game"), summary:document.getElementById("summary"),
-      startBtn:document.getElementById("startBtn"), resetBestBtn:document.getElementById("resetBestBtn"),
-      mode:document.getElementById("mode"), catBadge:document.getElementById("catBadge"), timer:document.getElementById("timer"),
-      score:document.getElementById("score"), streak:document.getElementById("streak"), best:document.getElementById("best"),
-      count:document.getElementById("count"), progress:document.getElementById("progress"), progressText:document.getElementById("progressText"),
+      startBtn:document.getElementById("startBtn"), soundBtn:document.getElementById("soundBtn"),
+      resetBestBtn:document.getElementById("resetBestBtn"), resetProgressBtn:document.getElementById("resetProgressBtn"),
+      mode:document.getElementById("mode"), mistakesInfo:document.getElementById("mistakesInfo"),
+      catBadge:document.getElementById("catBadge"), timer:document.getElementById("timer"),
+      score:document.getElementById("score"), streak:document.getElementById("streak"), best:document.getElementById("best"), count:document.getElementById("count"),
+      ringProgress:document.getElementById("ringProgress"), ringNum:document.getElementById("ringNum"), ringLabel:document.getElementById("ringLabel"),
+      progressText:document.getElementById("progressText"),
       questionText:document.getElementById("questionText"), answerArea:document.getElementById("answerArea"),
       feedback:document.getElementById("feedback"), submitBtn:document.getElementById("submitBtn"), nextBtn:document.getElementById("nextBtn"),
-      stopBtn:document.getElementById("stopBtn"), summaryText:document.getElementById("summaryText"), missedBox:document.getElementById("missedBox"),
-      againBtn:document.getElementById("againBtn"), homeBtn:document.getElementById("homeBtn")
+      resetItemBtn:document.getElementById("resetItemBtn"), stopBtn:document.getElementById("stopBtn"),
+      summaryText:document.getElementById("summaryText"), missedBox:document.getElementById("missedBox"),
+      againBtn:document.getElementById("againBtn"), homeBtn:document.getElementById("homeBtn"),
+      confetti:document.getElementById("confetti")
     };
 
-    function shuffle(arr){
-      return [...arr].sort(()=>Math.random()-0.5);
+    /* ---------- feature 1: sound, haptics, confetti, praise ---------- */
+    let soundOn = store.get("engl111FinSound") !== "off";
+    function refreshSoundBtn(){ els.soundBtn.textContent = "Sound: " + (soundOn ? "On" : "Off"); }
+    refreshSoundBtn();
+
+    let audioCtx = null;
+    function ensureCtx(){
+      if(!audioCtx){
+        try{ audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }catch(e){ audioCtx = null; }
+      }
+      if(audioCtx && audioCtx.state === "suspended"){ try{ audioCtx.resume(); }catch(e){} }
+      return audioCtx;
+    }
+    // iOS/Chrome-mobile need the audio context unlocked inside a user gesture (tap)
+    function unlockAudio(){
+      const ctx = ensureCtx();
+      if(!ctx) return;
+      try{
+        const b = ctx.createBuffer(1, 1, 22050);
+        const src = ctx.createBufferSource();
+        src.buffer = b; src.connect(ctx.destination); src.start(0);
+      }catch(e){}
+    }
+    function sfx(kind){
+      if(!soundOn) return;
+      const ctx = ensureCtx();
+      if(!ctx) return;
+      try{
+        const now = ctx.currentTime + 0.03;
+        const beep = (freqA, freqB, type, t0, dur, vol) => {
+          const o = ctx.createOscillator(), g = ctx.createGain();
+          o.connect(g); g.connect(ctx.destination);
+          o.type = type; o.frequency.setValueAtTime(freqA, t0);
+          if(freqB) o.frequency.exponentialRampToValueAtTime(freqB, t0 + dur);
+          g.gain.setValueAtTime(0.0001, t0);
+          g.gain.exponentialRampToValueAtTime(vol, t0 + 0.02);
+          g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+          o.start(t0); o.stop(t0 + dur + 0.02);
+        };
+        if(kind === "correct"){ beep(660, 990, "sine", now, 0.18, 0.32); }
+        else if(kind === "wrong"){ beep(240, 120, "triangle", now, 0.30, 0.28); }
+        else if(kind === "win"){ [523,659,784,1047].forEach((f,i)=>beep(f, null, "sine", now + i*0.09, 0.2, 0.3)); }
+      }catch(e){}
+    }
+    function buzz(pattern){ if(soundOn && navigator.vibrate){ try{ navigator.vibrate(pattern); }catch(e){} } }
+
+
+    const cctx = els.confetti.getContext("2d");
+    let confettiRAF = null;
+    function launchConfetti(){
+      if(!cctx) return;
+      const W = els.confetti.width = window.innerWidth;
+      const H = els.confetti.height = window.innerHeight;
+      els.confetti.style.display = "block";
+      const colors = ["#8A1538","#c94d73","#e8b53e","#2f9e6f","#3a6ea5","#e8e1da"];
+      const parts = [];
+      for(let i=0;i<80;i++){
+        parts.push({ x:Math.random()*W, y:-20-Math.random()*H*0.3, r:4+Math.random()*6,
+          c:colors[i%colors.length], vy:2+Math.random()*3.5, vx:-1.6+Math.random()*3.2,
+          rot:Math.random()*6.28, vr:-0.2+Math.random()*0.4 });
+      }
+      cancelAnimationFrame(confettiRAF);
+      const start = performance.now();
+      (function frame(now){
+        const t = now - start;
+        cctx.clearRect(0,0,W,H);
+        parts.forEach(p=>{
+          p.x+=p.vx; p.y+=p.vy; p.vy+=0.03; p.rot+=p.vr;
+          cctx.save(); cctx.translate(p.x,p.y); cctx.rotate(p.rot);
+          cctx.fillStyle=p.c; cctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.65); cctx.restore();
+        });
+        if(t < 1500){ confettiRAF = requestAnimationFrame(frame); }
+        else { cctx.clearRect(0,0,W,H); els.confetti.style.display="none"; }
+      })(start);
     }
 
-    function bestKey(){
-      return "engl111Best_" + categorySelect.value;
+    const PRAISE = ["Nice! 👏","On fire! 🔥","Perfect!","Well done!","Keep going!","Brilliant!","Great job!","أحسنتِ! 🌟","ممتاز!","رائع!"];
+    function randomPraise(){ return PRAISE[Math.floor(Math.random()*PRAISE.length)]; }
+
+    function animateNumber(el, from, to){
+      const start = performance.now(), dur = 400;
+      (function step(now){
+        const p = Math.min(1, (now-start)/dur);
+        el.textContent = Math.round(from + (to-from)*p);
+        if(p<1) requestAnimationFrame(step);
+      })(start);
     }
 
-    function getBest(){
-      return Number(localStorage.getItem(bestKey()) || 0);
+    /* ---------- feature 2: spaced repetition (Leitner) ---------- */
+    const SR_KEY = "engl111FinSR";
+    function loadSR(){ try{ return JSON.parse(store.get(SR_KEY)) || {}; }catch(e){ return {}; } }
+    function saveSR(sr){ try{ store.set(SR_KEY, JSON.stringify(sr)); }catch(e){} }
+    function boxOf(sr, id){ return (sr[id] && sr[id].box) ? sr[id].box : 1; }
+    function recordResult(id, ok){
+      const sr = loadSR();
+      const rec = sr[id] || { box:1, right:0, wrong:0 };
+      if(ok){ rec.box = Math.min(5, (rec.box||1) + 1); rec.right = (rec.right||0) + 1; }
+      else  { rec.box = 1; rec.wrong = (rec.wrong||0) + 1; }
+      rec.last = Date.now(); sr[id] = rec; saveSR(sr);
+    }
+    function inFocus(q, cat){ return cat === "All Grammar" || q.category === cat; }
+    function mistakesForFocus(cat){
+      const sr = loadSR();
+      return BANK.filter(q => inFocus(q, cat) && sr[q.id] && sr[q.id].box === 1 && (sr[q.id].wrong||0) > 0);
+    }
+    function weightedOrder(pool){
+      const sr = loadSR();
+      return pool.map(q => {
+        const w = 6 - boxOf(sr, q.id);      // box1 -> 5 (seen most), box5 -> 1 (seen least)
+        return { q, k: Math.random() / Math.max(1, w) };
+      }).sort((a,b) => a.k - b.k).map(o => o.q);
+    }
+    function updateMistakesInfo(){
+      const n = mistakesForFocus(categorySelect.value).length;
+      els.mistakesInfo.textContent = n
+        ? `🔁 You have ${n} saved mistake${n>1?"s":""} to review in this focus.`
+        : "✓ No saved mistakes here yet — a clean record so far.";
     }
 
-    function setBest(score){
-      if(score > getBest()) localStorage.setItem(bestKey(), String(score));
-    }
+    /* ---------- session ---------- */
+    let session = {};
+    let orderState = null, matchState = null, wordfillState = null;
 
-    function normalize(s){
-      return String(s).trim().toLowerCase().replace(/[’']/g,"'").replace(/\s+/g," ");
-    }
-
-    function isCorrect(user, answer){
-      const u = normalize(user);
-      const a = normalize(answer);
-      const aliases = {
-        "doesn’t":["doesn't","does not","doesn’t"],
-        "don’t":["don't","do not","don’t"],
-        "won’t":["won't","will not","won’t"],
-        "hasn’t":["hasn't","has not","hasn’t"],
-        "haven’t":["haven't","have not","haven’t"],
-        "isn’t":["isn't","is not","isn’t"],
-        "aren’t":["aren't","are not","aren’t"],
-        "have eaten":["have eaten","'ve eaten"],
-        "has written":["has written","'s written"],
-        "have lost":["have lost","'ve lost"],
-        "has been":["has been","'s been"],
-        "have met":["have met","'ve met"],
-        "has won":["has won","'s won"],
-        "have bought":["have bought","'ve bought"],
-        "will feel":["will feel","'ll feel"],
-        "will stay":["will stay","'ll stay"],
-        "will buy":["will buy","'ll buy"],
-        "will finish":["will finish","'ll finish"],
-        "will call":["will call","'ll call"],
-        "will arrive":["will arrive","'ll arrive"],
-        "won’t understand":["won't understand","will not understand","won’t understand"],
-        "will get":["will get","'ll get"],
-        "will come":["will come","'ll come"],
-        "will take":["will take","'ll take"]
-      };
-      if(u === a) return true;
-      const list = aliases[a] || aliases[answer];
-      return list ? list.map(normalize).includes(u) : false;
-    }
+    function shuffle(arr){ return [...arr].sort(()=>Math.random()-0.5); }
+    function bestKey(){ return "engl111Best_" + categorySelect.value; }
+    function getBest(){ return Number(store.get(bestKey()) || 0); }
+    function setBest(score){ if(score > getBest()) store.set(bestKey(), String(score)); }
+    function normalize(s){ return String(s).trim().toLowerCase().replace(/[’']/g,"'").replace(/\s+/g," "); }
+    function isCorrect(user, answer){ return normalize(user) === normalize(answer); }
 
     function start(){
       const cat = categorySelect.value;
-      let pool = cat === "All Grammar" ? BANK : BANK.filter(q=>q.category === cat);
-      pool = shuffle(pool);
       const mode = els.mode.value;
-      const max = mode === "ten" ? 10 : mode === "twenty" ? 20 : null;
-      session = {questions:pool, index:0, score:0, streak:0, answered:0, checked:false, max, timer:null, timeLeft: mode==="ten" ? 300 : 0, mode, current:null, missed:[]};
+      let pool;
+      if(mode === "review"){
+        pool = mistakesForFocus(cat);
+        if(!pool.length){ alert("No saved mistakes to review in this focus yet. Try a round first!"); return; }
+        pool = shuffle(pool);
+      } else {
+        pool = cat === "All Grammar" ? BANK.slice() : BANK.filter(q => q.category === cat);
+        pool = weightedOrder(pool);
+      }
+      const max = mode === "ten" ? 10 : mode === "twenty" ? 20 : mode === "review" ? pool.length : null;
+      session = {
+        questions:pool, index:0, score:0, streak:0, answered:0, checked:false,
+        max, timer:null, timeLeft: mode==="ten" ? 300 : 0, mode, current:null, missed:[]
+      };
       els.setup.classList.add("hidden");
       els.summary.classList.add("hidden");
       els.game.classList.remove("hidden");
+      els.score.textContent = "0";
       els.best.textContent = getBest();
       if(mode === "ten") startTimer();
       renderQuestion();
@@ -609,131 +416,313 @@
       clearInterval(session.timer);
       session.timer = setInterval(()=>{
         session.timeLeft--;
-        updateStats();
+        els.timer.textContent = `Time: ${formatTime(session.timeLeft)}`;
         if(session.timeLeft <= 0) finish("Time is up.");
       },1000);
     }
+    function formatTime(sec){ const m=Math.floor(sec/60), s=sec%60; return `${m}:${String(s).padStart(2,"0")}`; }
 
-    function formatTime(sec){
-      const m = Math.floor(sec/60);
-      const s = sec%60;
-      return `${m}:${String(s).padStart(2,"0")}`;
+    function setRing(fraction, num, label){
+      const C = 326.7;
+      els.ringProgress.style.strokeDashoffset = C * (1 - Math.max(0, Math.min(1, fraction)));
+      els.ringNum.textContent = num;
+      els.ringLabel.textContent = label;
     }
-
     function updateStats(){
-      els.score.textContent = session.score;
       els.streak.textContent = session.streak;
       els.best.textContent = Math.max(getBest(), session.score);
       els.count.textContent = session.answered;
       els.timer.textContent = session.mode === "ten" ? `Time: ${formatTime(session.timeLeft)}` : "";
-      const max = session.max;
-      if(max){
-        const pct = Math.min(100, (session.answered / max) * 100);
-        els.progress.style.width = pct + "%";
-        els.progressText.textContent = `${session.answered} of ${max} questions answered`;
+      if(session.max){
+        setRing(session.answered / session.max, session.answered, "of " + session.max);
+        els.progressText.textContent = `${session.answered} of ${session.max}`;
       } else {
-        els.progress.style.width = Math.min(100, (session.streak % 10) * 10) + "%";
-        els.progressText.textContent = `Endless practice · Fill the bar by getting a streak of 10.`;
+        const into = session.streak % 10;
+        setRing(session.streak === 0 ? 0 : (into === 0 ? 1 : into/10), session.streak, "streak");
+        els.progressText.textContent = "";
       }
     }
 
+    /* ---------- rendering ---------- */
     function renderQuestion(){
       session.checked = false;
+      orderState = null; matchState = null; wordfillState = null;
       els.feedback.className = "feedback";
       els.feedback.style.display = "none";
       els.nextBtn.classList.add("hidden");
+      els.resetItemBtn.classList.add("hidden");
       els.submitBtn.classList.remove("hidden");
+      els.answerArea.innerHTML = "";
 
       if(session.index >= session.questions.length){
+        if(session.mode === "review" || session.max){ finish(); return; }
         session.questions = shuffle(session.questions);
         session.index = 0;
       }
       session.current = session.questions[session.index++];
       const q = session.current;
       els.catBadge.textContent = q.category;
-      els.questionText.textContent = q.prompt;
-      els.answerArea.innerHTML = "";
 
-      if(q.type === "mcq"){
-        const wrap = document.createElement("div");
-        wrap.className = "choices";
-        shuffle(q.choices).forEach(choice=>{
-          const btn = document.createElement("button");
-          btn.className = "choice";
-          btn.textContent = choice;
-          btn.onclick = () => {
-            [...wrap.children].forEach(b=>b.dataset.selected="false");
-            btn.dataset.selected = "true";
-            [...wrap.children].forEach(b=>b.style.borderColor="#ead5dd");
-            btn.style.borderColor = "var(--garnet)";
-          };
-          wrap.appendChild(btn);
-        });
-        els.answerArea.appendChild(wrap);
-      } else {
-        const input = document.createElement("input");
-        input.type = "text";
-        input.id = "gapAnswer";
-        input.placeholder = "Type your answer";
-        input.autocomplete = "off";
-        input.addEventListener("keydown", e=>{
-          if(e.key === "Enter") checkAnswer();
-        });
-        els.answerArea.appendChild(input);
-        setTimeout(()=>input.focus(),50);
-      }
+      if(q.type === "order"){ renderOrder(q); }
+      else if(q.type === "match"){ renderMatch(q); }
+      else if(q.type === "wordfill"){ renderWordfill(q); }
+      else { renderMcq(q); }
+
       updateStats();
     }
 
-    function getUserAnswer(){
-      const q = session.current;
-      if(q.type === "mcq"){
-        const selected = [...document.querySelectorAll(".choice")].find(b=>b.dataset.selected === "true");
-        return selected ? selected.textContent : "";
+    function renderMcq(q){
+      els.questionText.textContent = q.prompt;
+      const wrap = document.createElement("div");
+      wrap.className = "choices";
+      shuffle(q.choices).forEach(choice=>{
+        const btn = document.createElement("button");
+        btn.className = "choice"; btn.textContent = choice;
+        btn.onclick = () => {
+          if(session.checked) return;
+          [...wrap.children].forEach(b=>{ b.dataset.selected="false"; b.classList.remove("sel"); });
+          btn.dataset.selected = "true"; btn.classList.add("sel");
+        };
+        wrap.appendChild(btn);
+      });
+      els.answerArea.appendChild(wrap);
+    }
+
+    function renderOrder(q){
+      els.questionText.textContent = q.prompt;
+      els.resetItemBtn.classList.remove("hidden");
+      orderState = { slots:new Array(q.steps.length).fill(null), slotEls:[], poolEl:null };
+      const wrap = document.createElement("div"); wrap.className = "order-wrap";
+
+      const slotBox = document.createElement("div");
+      slotBox.innerHTML = `<div class="section-label">Put the steps in order:</div>`;
+      const slotList = document.createElement("div"); slotList.className = "slot-list";
+      for(let i=0;i<q.steps.length;i++){
+        const slot = document.createElement("div"); slot.className = "order-slot";
+        slot.innerHTML = `<span class="num">${i+1}</span><span class="empty">tap a step below…</span>`;
+        slot.onclick = () => {
+          if(session.checked) return;
+          const val = orderState.slots[i];
+          if(val){ orderState.slots[i] = null; renderOrderState(q); }
+        };
+        orderState.slotEls.push(slot);
+        slotList.appendChild(slot);
       }
-      const input = document.getElementById("gapAnswer");
-      return input ? input.value : "";
+      slotBox.appendChild(slotList);
+
+      const poolBox = document.createElement("div");
+      poolBox.innerHTML = `<div class="section-label">Steps:</div>`;
+      const poolList = document.createElement("div"); poolList.className = "pool-list";
+      orderState.poolEl = poolList;
+      poolBox.appendChild(poolList);
+
+      wrap.appendChild(slotBox); wrap.appendChild(poolBox);
+      els.answerArea.appendChild(wrap);
+      renderOrderState(q);
+    }
+    function renderOrderState(q){
+      // slots
+      orderState.slots.forEach((val, i)=>{
+        const slot = orderState.slotEls[i];
+        slot.className = "order-slot";
+        slot.innerHTML = `<span class="num">${i+1}</span>` +
+          (val ? `<span class="filled">${val}</span>` : `<span class="empty">tap a step below…</span>`);
+        slot.onclick = () => { if(session.checked) return; if(orderState.slots[i]){ orderState.slots[i]=null; renderOrderState(q); } };
+      });
+      // pool = steps not placed
+      const placed = new Set(orderState.slots.filter(Boolean));
+      orderState.poolEl.innerHTML = "";
+      shuffle(q.steps.filter(s=>!placed.has(s))).forEach(step=>{
+        const b = document.createElement("button"); b.className = "pool-item"; b.textContent = step;
+        b.onclick = () => {
+          if(session.checked) return;
+          const empty = orderState.slots.indexOf(null);
+          if(empty === -1) return;
+          orderState.slots[empty] = step; renderOrderState(q);
+        };
+        orderState.poolEl.appendChild(b);
+      });
+    }
+
+    function renderMatch(q){
+      els.questionText.textContent = q.prompt;
+      els.resetItemBtn.classList.remove("hidden");
+      matchState = { chosen:{}, selLeft:null, leftEls:[], rightEls:[], rightUsed:{} };
+      const lefts = q.pairs.map((p,i)=>({ text:p[0], i }));
+      const rights = shuffle(q.pairs.map(p=>p[1]));
+
+      const wrap = document.createElement("div"); wrap.className = "match-wrap";
+      const leftCol = document.createElement("div"); leftCol.className = "match-col";
+      const rightCol = document.createElement("div"); rightCol.className = "match-col";
+
+      lefts.forEach(L=>{
+        const el = document.createElement("div"); el.className = "match-item match-left"; el.textContent = L.text;
+        el.dataset.i = L.i;
+        el.onclick = () => {
+          if(session.checked || matchState.chosen[L.i] !== undefined) return;
+          matchState.selLeft = L.i;
+          matchState.leftEls.forEach(e=>e.classList.remove("sel"));
+          el.classList.add("sel");
+        };
+        matchState.leftEls.push(el); leftCol.appendChild(el);
+      });
+      rights.forEach(prep=>{
+        const el = document.createElement("div"); el.className = "match-item"; el.textContent = prep; el.dataset.prep = prep;
+        el.onclick = () => {
+          if(session.checked || matchState.rightUsed[prep]) return;
+          if(matchState.selLeft === null) return;
+          const li = matchState.selLeft;
+          matchState.chosen[li] = prep; matchState.rightUsed[prep] = li;
+          const n = Object.keys(matchState.chosen).length;
+          const leftEl = matchState.leftEls.find(e=>Number(e.dataset.i) === li);
+          leftEl.classList.remove("sel"); leftEl.classList.add("done");
+          leftEl.insertAdjacentHTML("beforeend", `<span class="tag">${n}</span>`);
+          el.classList.add("done");
+          el.innerHTML = `${prep}<span class="tag">${n}</span>`;
+          matchState.selLeft = null;
+        };
+        matchState.rightEls.push(el); rightCol.appendChild(el);
+      });
+      wrap.appendChild(leftCol); wrap.appendChild(rightCol);
+      els.answerArea.appendChild(wrap);
+    }
+
+    function renderWordfill(q){
+      els.questionText.textContent = q.prompt;
+      els.resetItemBtn.classList.remove("hidden");
+      wordfillState = { selections:new Array(q.blanks.length).fill(null), blankEls:[], chipEls:[] };
+      const wrap = document.createElement("div"); wrap.className = "wordfill-wrap";
+      q.blanks.forEach((b, i)=>{
+        const item = document.createElement("div"); item.className = "wf-item";
+        const sent = document.createElement("div"); sent.className = "wf-sentence";
+        const parts = b.sentence.split("___");
+        sent.append(document.createTextNode(parts[0] || ""));
+        const blank = document.createElement("span"); blank.className = "wf-blank"; blank.textContent = "?";
+        sent.append(blank);
+        sent.append(document.createTextNode(parts[1] || ""));
+        const choices = document.createElement("div"); choices.className = "wf-choices";
+        const chips = [];
+        shuffle(b.choices).forEach(word=>{
+          const chip = document.createElement("button"); chip.className = "wf-chip"; chip.textContent = word;
+          chip.onclick = () => {
+            if(session.checked) return;
+            wordfillState.selections[i] = word; blank.textContent = word;
+            chips.forEach(c=>c.classList.remove("sel")); chip.classList.add("sel");
+          };
+          chips.push(chip); choices.appendChild(chip);
+        });
+        wordfillState.blankEls.push(blank); wordfillState.chipEls.push(chips);
+        item.appendChild(sent); item.appendChild(choices); wrap.appendChild(item);
+      });
+      els.answerArea.appendChild(wrap);
+    }
+    function markWordfill(q){
+      q.blanks.forEach((b, i)=>{
+        const chosen = wordfillState.selections[i];
+        const right = chosen === b.answer;
+        wordfillState.chipEls[i].forEach(chip=>{
+          chip.disabled = true;
+          if(chip.textContent === chosen) chip.classList.add(right ? "correct" : "wrong");
+        });
+      });
+    }
+
+    function resetCurrentItem(){
+      if(session.checked) return;
+      const q = session.current;
+      if(q.type === "order"){ orderState.slots = new Array(q.steps.length).fill(null); renderOrderState(q); }
+      else if(q.type === "match"){ renderMatch(q); }
+      else if(q.type === "wordfill"){ renderWordfill(q); }
+    }
+
+    /* ---------- checking ---------- */
+    function evaluateCurrent(){
+      const q = session.current;
+      if(q.type === "order"){
+        if(orderState.slots.includes(null)) return { empty:true };
+        return { ok: orderState.slots.every((s,i)=>s === q.steps[i]) };
+      }
+      if(q.type === "match"){
+        if(Object.keys(matchState.chosen).length < q.pairs.length) return { empty:true };
+        return { ok: q.pairs.every((p,i)=> matchState.chosen[i] === p[1]) };
+      }
+      if(q.type === "wordfill"){
+        if(wordfillState.selections.includes(null)) return { empty:true };
+        return { ok: q.blanks.every((b,i)=> wordfillState.selections[i] === b.answer) };
+      }
+      const sel = [...document.querySelectorAll(".choice")].find(b=>b.dataset.selected === "true");
+      if(!sel) return { empty:true };
+      return { ok: isCorrect(sel.textContent, q.answer), user:sel.textContent };
+    }
+
+    function markOrder(q){
+      orderState.slots.forEach((s,i)=>{
+        orderState.slotEls[i].classList.remove("correct","wrong");
+        orderState.slotEls[i].classList.add(s === q.steps[i] ? "correct" : "wrong");
+      });
+    }
+    function markMatch(q){
+      q.pairs.forEach((p,i)=>{
+        const ok = matchState.chosen[i] === p[1];
+        const leftEl = matchState.leftEls.find(e=>Number(e.dataset.i) === i);
+        if(leftEl) leftEl.classList.add(ok ? "correct" : "wrong");
+        const chosenPrep = matchState.chosen[i];
+        const rightEl = matchState.rightEls.find(e=>e.dataset.prep === chosenPrep && !e.dataset.marked);
+        if(rightEl){ rightEl.dataset.marked = "1"; rightEl.classList.add(ok ? "correct" : "wrong"); }
+      });
     }
 
     function checkAnswer(){
       if(session.checked) return;
       const q = session.current;
-      const user = getUserAnswer();
-      if(!user){
+      const res = evaluateCurrent();
+      if(res.empty){
         els.feedback.className = "feedback wrong";
         els.feedback.style.display = "block";
-        els.feedback.innerHTML = "Choose an answer first.";
+        els.feedback.textContent = q.type === "mcq" ? "Choose an answer first." :
+          q.type === "order" ? "Fill every step first." :
+          q.type === "wordfill" ? "Choose a word for every step first." : "Match every item first.";
         return;
       }
-      const ok = isCorrect(user, q.answer);
       session.checked = true;
       session.answered++;
-      if(ok){
-        session.score++;
-        session.streak++;
+      els.feedback.style.display = "block";
+      recordResult(q.id, res.ok);
+      const prevScore = session.score;
+
+      if(res.ok){
+        session.score++; session.streak++;
+        const milestone = session.streak > 0 && session.streak % 10 === 0;
         els.feedback.className = "feedback correct";
-        els.feedback.innerHTML = "Correct!";
+        els.feedback.innerHTML = `<div class="praise"><span class="fb-mark">✓</span> ${randomPraise()}</div>`;
+        if(milestone){ sfx("win"); buzz([15,40,15,40,60]); launchConfetti(); }
+        else { sfx("correct"); buzz(25); }
+        animateNumber(els.score, prevScore, session.score);
       } else {
         session.streak = 0;
         session.missed.push(q);
         els.feedback.className = "feedback wrong";
-        els.feedback.innerHTML = `Not quite. Correct answer: <strong>${q.answer}</strong><div class="arabic">${q.explanation}</div>`;
+        els.feedback.innerHTML = `<div class="fb-line"><span class="fb-mark">✗</span></div><div class="arabic">${q.explanation}</div>`;
+        sfx("wrong"); buzz([30,40,30]);
       }
-      els.feedback.style.display = "block";
+      if(q.type === "mcq"){
+        const sel = [...document.querySelectorAll(".choice")].find(b=>b.dataset.selected === "true");
+        if(sel){ sel.classList.remove("sel"); sel.classList.add(res.ok ? "correct" : "wrong"); }
+        [...document.querySelectorAll(".choice")].forEach(b=>b.disabled = true);
+      }
+      if(q.type === "order") markOrder(q);
+      if(q.type === "match") markMatch(q);
+      if(q.type === "wordfill") markWordfill(q);
+
       setBest(session.score);
       updateStats();
 
-      if(session.max && session.answered >= session.max){
-        els.submitBtn.classList.add("hidden");
-        els.nextBtn.textContent = "See Summary";
-        els.nextBtn.classList.remove("hidden");
-        els.nextBtn.onclick = () => finish();
-      } else {
-        els.submitBtn.classList.add("hidden");
-        els.nextBtn.textContent = "Next";
-        els.nextBtn.classList.remove("hidden");
-        els.nextBtn.onclick = renderQuestion;
-      }
+      els.submitBtn.classList.add("hidden");
+      els.resetItemBtn.classList.add("hidden");
+      const last = session.max && session.answered >= session.max;
+      els.nextBtn.textContent = last ? "See Summary" : "Next";
+      els.nextBtn.classList.remove("hidden");
+      els.nextBtn.onclick = last ? () => finish() : renderQuestion;
     }
 
     function finish(reason=""){
@@ -743,18 +732,30 @@
       els.summary.classList.remove("hidden");
       const total = session.answered || 0;
       const percent = total ? Math.round((session.score/total)*100) : 0;
-      els.summaryText.innerHTML = `${reason ? reason + "<br>" : ""}<strong>Score:</strong> ${session.score}/${total} (${percent}%). <strong>Best score for this focus:</strong> ${getBest()}.`;
+      const perfect = total > 0 && session.score === total;
+      els.summaryText.innerHTML =
+        `${reason ? reason + "<br>" : ""}<strong>Score:</strong> ${session.score}/${total} (${percent}%). ` +
+        `<strong>Best for this focus:</strong> ${getBest()}.` +
+        (perfect ? `<br><strong>Perfect round! 🎉</strong>` : "");
+
+      if(perfect){ sfx("win"); launchConfetti(); }
 
       if(session.missed.length){
-        const unique = session.missed.slice(-6);
-        els.missedBox.innerHTML = `<h3>Review these:</h3><ul class="review-list">${unique.map(q=>`<li>${q.prompt}<br><strong>Answer:</strong> ${q.answer}</li>`).join("")}</ul>`;
+        const unique = [];
+        const seen = new Set();
+        session.missed.slice().reverse().forEach(q=>{ if(!seen.has(q.id)){ seen.add(q.id); unique.push(q); } });
+        els.missedBox.innerHTML = `<h3>Review these:</h3><ul class="review-list">${
+          unique.slice(0,6).map(q=>`<li>${q.prompt}</li>`).join("")
+        }</ul>`;
       } else {
         els.missedBox.innerHTML = `<p>Great work. No missed questions in this round.</p>`;
       }
     }
 
-    els.startBtn.onclick = start;
-    els.submitBtn.onclick = checkAnswer;
+    /* ---------- bindings ---------- */
+    els.startBtn.onclick = () => { unlockAudio(); start(); };
+    els.submitBtn.onclick = () => { ensureCtx(); checkAnswer(); };
+    els.resetItemBtn.onclick = resetCurrentItem;
     els.stopBtn.onclick = () => finish("Practice stopped.");
     els.againBtn.onclick = start;
     els.homeBtn.onclick = () => {
@@ -762,12 +763,36 @@
       els.summary.classList.add("hidden");
       els.game.classList.add("hidden");
       els.setup.classList.remove("hidden");
+      updateMistakesInfo();
+    };
+    els.soundBtn.onclick = () => {
+      soundOn = !soundOn;
+      store.set("engl111FinSound", soundOn ? "on" : "off");
+      refreshSoundBtn();
+      if(soundOn){ unlockAudio(); sfx("correct"); }
     };
     els.resetBestBtn.onclick = () => {
-      localStorage.removeItem(bestKey());
+      store.remove(bestKey());
       alert("Best score reset for this grammar focus.");
     };
+    els.resetProgressBtn.onclick = () => {
+      const cat = categorySelect.value;
+      if(!confirm(`Clear saved progress and mistakes for "${cat}"?`)) return;
+      const sr = loadSR();
+      BANK.forEach(q=>{ if(inFocus(q, cat)) delete sr[q.id]; });
+      saveSR(sr);
+      updateMistakesInfo();
+    };
+    categorySelect.onchange = updateMistakesInfo;
+    document.addEventListener("keydown", e=>{
+      if(els.game.classList.contains("hidden")) return;
+      if(e.key === "Enter"){
+        if(!els.nextBtn.classList.contains("hidden")) els.nextBtn.click();
+        else els.submitBtn.click();
+      }
+    });
 
+    updateMistakesInfo();
   </script>
 </body>
 </html>
